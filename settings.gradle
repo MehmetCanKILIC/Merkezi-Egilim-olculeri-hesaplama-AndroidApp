@@ -1,0 +1,2 @@
+rootProject.name='merkeziegilim'
+include ':app', ':opencsv'

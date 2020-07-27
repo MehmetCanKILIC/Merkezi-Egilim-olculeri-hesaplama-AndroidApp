@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    tools:context=".BaslangicActivity">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="25dp"
+        android:id="@+id/ust">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ellegir"
+            android:background="@drawable/butontasarim"
+            android:textColor="#FFF"
+            android:text="Veri Girerek Hesapla"></Button>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alt"
+        android:layout_below="@+id/ust">
+        <Button
+            android:id="@+id/dosyadangir"
+            android:background="@drawable/butontasarim"
+            android:layout_width="match_parent"
+            android:textColor="#FFF"
+            android:layout_height="wrap_content"
+            android:text="CSV Dosyası Ekle" /></RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".hesapla">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/bir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/elemansayisitext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10dp"
+                    android:text="Elemanların sayısı"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/elemansayisi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:text="-"
+                    android:textColor="#E42E2E"
+                    android:textSize="18dp"></TextView>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/iki"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bir"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/elemantoplamitext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10dp"
+                    android:text="Elemanların Toplamı"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/elemantoplami"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:text="-"
+                    android:textColor="#E42E2E"
+                    android:textSize="18dp"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/uc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iki"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/ssapmatext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10dp"
+                    android:text="Standart sapma"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/ssapma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:text="-"
+                    android:textColor="#E42E2E"
+                    android:textSize="18dp"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/uc"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/varyanstext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10dp"
+                    android:text="Varyans"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/varyans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:text="-"
+                    android:textColor="#E42E2E"
+                    android:textSize="18dp"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dort"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/enbuyukelemantext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10dp"
+                    android:text="En Büyük Eleman"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/enbuyukeleman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:text="-"
+                    android:textColor="#E42E2E"
+                    android:textSize="18dp"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/alti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bes"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/enkucukelemantext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10dp"
+                    android:text="En Küçük Eleman"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/enkucukeleman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:text="-"
+                    android:textColor="#E42E2E"
+                    android:textSize="18dp"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/yedi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/alti"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/aritmetikorttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10dp"
+                    android:text="Aritmetik Ortalama"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/aritmetikort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:text="-"
+                    android:textColor="#E42E2E"
+                    android:textSize="18dp"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sekiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/yedi"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/harmonikorttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10dp"
+                    android:text="Harmonik Ortalama"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/harmonikort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:text="-"
+                    android:textColor="#E42E2E"
+                    android:textSize="18dp"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dokuz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sekiz"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/geometrikorttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10dp"
+                    android:text="Geometrik Ortalama"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/geometrikort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:text="-"
+                    android:textColor="#E42E2E"
+                    android:textSize="18dp"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/on"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dokuz"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/medyantext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10dp"
+                    android:text="Medyan"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/medyan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:text="-"
+                    android:textColor="#E42E2E"
+                    android:textSize="18dp"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/onbir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/on"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/modtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10dp"
+                    android:text="Mod(Tepe Değer)"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/mod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:text="-"
+                    android:textColor="#E42E2E"
+                    android:textSize="18dp"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/oniki"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/onbir"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/modtekrartext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10dp"
+                    android:text="Mod Tekrar Sayısı"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/modtekrar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:text="-"
+                    android:textColor="#E42E2E"
+                    android:textSize="18dp"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/onuc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/oniki"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000" />
+                <TextView
+                    android:id="@+id/carpikliktext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#E42E2E"
+                    android:text="Yok"
+                    android:textSize="18dp"></TextView>
+
+                <ImageView
+                    android:id="@+id/carpiklikresim"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/carpiklik"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:adjustViewBounds="true"
+                    android:paddingTop="10dp"></ImageView>
+
+                <TextView
+                    android:id="@+id/carpiklik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="Çarpıklık"
+                    android:textSize="18dp"></TextView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

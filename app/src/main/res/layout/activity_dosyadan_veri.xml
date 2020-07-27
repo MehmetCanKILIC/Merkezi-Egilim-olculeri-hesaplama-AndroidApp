@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dosyadanVeri"
+    android:orientation="horizontal"
+    android:paddingTop="5dp"
+    android:background="#F0F8FF">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="Hesaplanacak Sütunun Numarası"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:id="@+id/sutunnumara"
+        android:inputType="numberDecimal"
+        android:textColor="#000000"
+        android:background="@drawable/edittextbackground"
+        ></EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:id="@+id/butonlar"
+        android:paddingBottom="5dp"
+        android:layout_below="@+id/sutunnumara"
+        android:weightSum="2">
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFF"
+            android:background="@drawable/butontasarim"
+            android:id="@+id/dosyadangetir"
+            android:text="Verileri Getir"></Button>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFF"
+            android:background="@drawable/butontasarim"
+            android:id="@+id/dosyadanhesapla"
+            android:text="Hesapla"></Button>
+
+
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tumveriler"
+        android:layout_below="@+id/butonlar"></ListView>
+
+
+
+</RelativeLayout>

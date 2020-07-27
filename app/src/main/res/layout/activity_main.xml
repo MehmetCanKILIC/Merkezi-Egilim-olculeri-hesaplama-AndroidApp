@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:paddingTop="5dp"
+    android:background="#F0F8FF">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="Veri Girin.."
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:id="@+id/verigirme"
+        android:inputType="numberDecimal"
+        android:textColor="#000000"
+        android:background="@drawable/edittextbackground"
+        ></EditText>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:id="@+id/verigirbutton"
+        android:layout_below="@+id/verigirme"
+        android:weightSum="1">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/verigir"
+        android:layout_below="@+id/verigirme"
+        android:text="Veri gir"
+        android:textColor="#FFFF"
+        android:background="@drawable/butontasarim"></Button></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:id="@+id/butonlar"
+        android:paddingBottom="5dp"
+        android:layout_below="@+id/verigirbutton"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/verigetir"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/butontasarim"
+            android:textColor="#FFFF"
+            android:layout_height="wrap_content"
+            android:text="Verileri Güncelle"></Button>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFF"
+            android:background="@drawable/butontasarim"
+            android:id="@+id/verihesapla"
+            android:text="Hesapla"></Button>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/deneme"
+        android:layout_below="@+id/butonlar"
+        ></TextView>
+
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_below="@+id/deneme"/>
+
+
+
+
+
+</RelativeLayout>
